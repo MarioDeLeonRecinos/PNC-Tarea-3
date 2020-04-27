@@ -45,7 +45,7 @@ public class MainController {
 		if (lname.length() > 25 || lname.isEmpty()) {
 			errList.add("El campo Apellidos debe de tener como mínimo 1 carácter y máximo 25 caracteres");
 		} else if (bDate.before(lDate)) {
-			errList.add("La Fecha de Nacimiento no puede ser mayor al 1 de enero de 2003");
+			errList.add("La Fecha de Nacimiento no puede ser menor al 1 de enero de 2003");
 		}
 		if (bdate.length() > 25 || bdate.isEmpty()) {
 			errList.add("El campo Lugar de Nacimiento debe de tener como mínimo 1 carácter y máximo 25 caracteres");
