@@ -42,7 +42,8 @@ public class MainController {
 		}
 		if (lname.length() > 25 || lname.isEmpty()) {
 			errList.add("El campo Apellidos debe de tener como mínimo 1 carácter y máximo 25 caracteres");
-		} else if (bDate.before(lDate)) {
+		}
+		if (bDate.before(lDate)) {
 			errList.add("La Fecha de Nacimiento no puede ser menor al 1 de enero de 2003");
 		}
 		if (bdate.length() > 25 || bdate.isEmpty()) {
@@ -51,15 +52,13 @@ public class MainController {
 		if (coll.length() > 100 || coll.isEmpty()) {
 			errList.add("El campo Intituto o Colegio debe de tener como mínimo 1 carácter y máximo 100 caracteres");
 		}
-
 		if (hphone.length() != 8) {
 			errList.add("El campo Telefono fijo debe de tener 8 números exactamente");
 		}
-
 		if (mphone.length() != 8) {
 			errList.add("El campo Telefono Movil debe de tener 8 números exactamente");
 		}
-
+		
 		mav.addObject("errores", errList);
 
 		if (errList.isEmpty()) {
