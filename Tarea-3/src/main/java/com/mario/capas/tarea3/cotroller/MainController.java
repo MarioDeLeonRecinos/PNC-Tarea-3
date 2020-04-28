@@ -48,9 +48,6 @@ public class MainController {
 		if (bdate.length() > 25 || bdate.isEmpty()) {
 			errList.add("El campo Lugar de Nacimiento debe de tener como mínimo 1 carácter y máximo 25 caracteres");
 		}
-		if (bDate.after(lDate)) {
-
-		}
 		if (coll.length() > 100 || coll.isEmpty()) {
 			errList.add("El campo Intituto o Colegio debe de tener como mínimo 1 carácter y máximo 100 caracteres");
 		}
